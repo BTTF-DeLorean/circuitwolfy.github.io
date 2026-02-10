@@ -1,0 +1,223 @@
+/* ================= RESET ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #d0e7ff;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #d0e7ff,
+        #d0e7ff 5px,
+        #b0d4ff 5px,
+        #b0d4ff 10px
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* ================= HEADER ================= */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-family: 'Frutiger', sans-serif;
+    font-size: 3rem;
+    color: #004a99;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3), 0 0 10px rgba(255,255,255,0.3);
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #0066cc;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+}
+
+/* ================= MENU ================= */
+.menu {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.menu-item {
+    text-decoration: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #f0faff 0%, #c0e0ff 100%);
+    border: 2px solid #99bbff;
+    color: #004a99;
+    font-weight: bold;
+    box-shadow:
+        0 6px 0 #99bbff,
+        0 -3px 6px rgba(255,255,255,0.6);
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+    background: linear-gradient(to bottom, #c0e0ff, #f0faff 100%);
+    box-shadow:
+        0 3px 0 #99bbff,
+        0 -2px 5px rgba(255,255,255,0.7);
+}
+
+/* ================= CARDS ================= */
+.card {
+    background: linear-gradient(to bottom, #f8fdff 0%, #cceeff 100%);
+    border-radius: 35px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    width: 400px;
+    text-align: center;
+    border: 2px solid #b0d4ff;
+    box-shadow:
+        6px 6px 20px rgba(0,0,0,0.3),
+        inset -3px -3px 12px rgba(255,255,255,0.6),
+        inset 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ================= ABOUT ME ================= */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #99bbff;
+    background: linear-gradient(to bottom, #e0f4ff 0%, #f8fdff 100%);
+    box-shadow:
+        0 4px 8px rgba(0,0,0,0.3),
+        inset -2px -2px 6px rgba(255,255,255,0.6),
+        inset 2px 2px 4px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.profile-pic:hover {
+    box-shadow:
+        0 6px 12px rgba(0,0,0,0.35),
+        inset -2px -2px 6px rgba(255,255,255,0.8),
+        inset 2px 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+
+/* ================= GROUP ================= */
+.group-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.group-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #99bbff;
+    background: linear-gradient(to bottom, #e0f4ff 0%, #f8fdff 100%);
+    box-shadow:
+        0 4px 8px rgba(0,0,0,0.3),
+        inset -2px -2px 6px rgba(255,255,255,0.6),
+        inset 2px 2px 4px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.group-logo:hover {
+    box-shadow:
+        0 6px 12px rgba(0,0,0,0.35),
+        inset -2px -2px 6px rgba(255,255,255,0.8),
+        inset 2px 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+
+/* ================= PROJECT (COMMUNITY HIGHLIGHTS) ================= */
+.project {
+    margin: 1rem 0;
+    padding: 1.2rem;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #f8fdff 0%, #d0ebff 100%);
+    border: 2px solid #b0d4ff;
+    box-shadow:
+        4px 4px 15px rgba(0,0,0,0.3),
+        inset -2px -2px 8px rgba(255,255,255,0.5);
+}
+
+.project-thumbnail {
+    height: 150px;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid #a0c4ff;
+    background: linear-gradient(to bottom, #c0e0ff 0%, #e0f4ff 100%);
+    margin-bottom: 0.5rem;
+    box-shadow: inset 3px 3px 8px rgba(0,0,0,0.2), inset -1px -1px 4px rgba(255,255,255,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.community-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================= BUTTONS ================= */
+.skeuo-button {
+    background: linear-gradient(to bottom, #d0e7ff 0%, #f0fbff 50%, #c0e4ff 100%);
+    border-radius: 30px;
+    border: 2px solid #99bbff;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.2rem;
+    color: #004a99;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+        0 6px 0 #99bbff,
+        0 -3px 6px rgba(255,255,255,0.6);
+    transition: all 0.2s ease-in-out;
+    margin-top: 1.2rem;
+}
+
+.skeuo-button:active {
+    box-shadow: inset 0 6px 0 #99bbff, inset 0 -3px 6px rgba(255,255,255,0.6);
+    transform: translateY(2px);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ================= INPUTS (if needed later) ================= */
+.skeuo-input {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 25px;
+    border: 2px solid #99bbff;
+    background: linear-gradient(to bottom, #e0f4ff 0%, #f8fdff 100%);
+    box-shadow:
+        inset 3px 3px 10px rgba(0,0,0,0.2),
+        inset -1px -1px 6px rgba(255,255,255,0.6);
+    font-size: 1rem;
+}
