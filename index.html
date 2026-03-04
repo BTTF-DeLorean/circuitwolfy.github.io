@@ -52,6 +52,53 @@
         </div>
         <a href="group.html" class="skeuo-button">Check out the fun!</a>
     </section>
+    
+    
+    <section id="socialVids" class="card">
+        <h2>Latest Videos</h2>
+        <br>
+        
+            <div style="position: relative; width: 335px;">
+
+<div class="video-wrapper">
+
+  <video 
+    id="myVideo"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
+    <source src="TechNardogic.mp4" type="video/mp4">
+  </video>
+
+  <button id="muteButton" onclick="toggleSound()">
+    🔊 UNMUTE
+  </button>
+
+</div>
+<br>
+<p>You can check out my other videos in the "Find Me Online" section in the About Me page!</p>
+
+<script>
+  const video = document.getElementById("myVideo");
+  const button = document.getElementById("muteButton");
+
+  function toggleSound() {
+    video.muted = !video.muted;
+
+    if (video.muted) {
+      button.textContent = "🔊 UNMUTE";
+    } else {
+      button.textContent = "🔇 MUTE";
+    }
+  }
+</script>
+
+
+
+    
+    
 </main>
 
 
