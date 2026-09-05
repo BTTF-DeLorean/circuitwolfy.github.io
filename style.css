@@ -319,79 +319,53 @@ footer {
 }
 
 /* ================= GALLERY ================= */
+
+.gallery-card {
+    width: 850px;
+    max-width: 95vw;
+}
+
 .gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin-top: 1.5rem;
 }
 
 .gallery-item {
     background: linear-gradient(to bottom, #f8fdff 0%, #d0ebff 100%);
     border-radius: 25px;
-    padding: 1rem;
+    padding: 0.8rem;
     border: 2px solid #b0d4ff;
     box-shadow:
         4px 4px 15px rgba(0,0,0,0.3),
         inset -2px -2px 8px rgba(255,255,255,0.5);
+    overflow: hidden;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 180px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 20px;
+    display: block;
+    border-radius: 18px;
     border: 2px solid #99bbff;
-    margin-bottom: 0.5rem;
+    margin: 0;
 }
 
-.gallery-item p {
-    font-size: 0.95rem;
-    color: #004a99;
-}
+/* ================= GALLERY RESPONSIVE ================= */
 
+@media (max-width: 700px) {
+    .gallery-card {
+        width: 400px;
+        max-width: 95vw;
+    }
 
-  .video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  border-radius: 20px;
-  overflow: hidden; /* This makes it stay inside rounded box */
-}
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 
-.video-wrapper video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#muteButton {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-
-  padding: 12px 22px;
-  font-size: 14px;
-  font-weight: bold;
-
-  color: white;
-  background: linear-gradient(to bottom, #5e5e5e, #2b2b2b);
-  border: 2px solid #1a1a1a;
-  border-radius: 30px;
-
-  box-shadow:
-    inset 0 2px 4px rgba(255,255,255,0.3),
-    0 6px 0 #1a1a1a,
-    0 8px 15px rgba(0,0,0,0.5);
-
-  cursor: pointer;
-  transition: all 0.1s ease;
-}
-
-#muteButton:active {
-  transform: translateY(6px);
-  box-shadow:
-    inset 0 2px 4px rgba(0,0,0,0.4),
-    0 2px 0 #1a1a1a,
-    0 4px 8px rgba(0,0,0,0.4);
+    .gallery-item img {
+        height: 220px;
+    }
 }
