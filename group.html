@@ -58,38 +58,47 @@
 </section>
 
 
-    <!-- IMAGE GALLERY -->
+
+<!-- IMAGE GALLERY -->
 <section class="card gallery-card">
     <h2>Gallery</h2>
 
     <div class="gallery">
 
         <div class="gallery-item">
-            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/HallwayStairs/Wall1.jpg" alt="Group Photo">
+            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/HallwayStairs/Wall1.jpg" alt="Group Photo" onclick="openLightbox(this)">
         </div>
 
         <div class="gallery-item">
-            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/HallwayStairs/Wall2.jpg" alt="Group Photo">
+            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/HallwayStairs/Wall2.jpg" alt="Group Photo" onclick="openLightbox(this)">
         </div>
 
         <div class="gallery-item">
-            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/HallwayStairs/Wall3.jpg" alt="Group Photo">
+            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/HallwayStairs/Wall3.jpg" alt="Group Photo" onclick="openLightbox(this)">
         </div>
 
         <div class="gallery-item">
-            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/HallwayStairs/Wall4.jpg" alt="Group Photo">
+            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/HallwayStairs/Wall4.jpg" alt="Group Photo" onclick="openLightbox(this)">
         </div>
 
         <div class="gallery-item">
-            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/TVGallery/Wall3.jpg" alt="Group Photo">
+            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/TVGallery/Wall3.jpg" alt="Group Photo" onclick="openLightbox(this)">
         </div>
 
         <div class="gallery-item">
-            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/TVGallery/Wall5.jpg" alt="Group Photo">
+            <img src="https://bttf-delorean.github.io/Circuits-Cool-Lobby/TVGallery/Wall5.jpg" alt="Group Photo" onclick="openLightbox(this)">
         </div>
 
     </div>
 </section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-image" src="" alt="Enlarged Gallery Image" onclick="event.stopPropagation()">
+</div>
+```
+
 
         </div>
     </section>
