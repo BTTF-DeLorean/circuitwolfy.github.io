@@ -102,13 +102,24 @@ body {
         0 -2px 5px rgba(255,255,255,0.7);
 }
 
+/* ================= MAIN CONTENT ================= */
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* ================= CARDS ================= */
+
 .card {
     background: linear-gradient(to bottom, #f8fdff 0%, #cceeff 100%);
     border-radius: 35px;
     padding: 2rem;
     margin: 1.5rem 0;
     width: 400px;
+    max-width: 95vw;
     text-align: center;
     border: 2px solid #b0d4ff;
     box-shadow:
@@ -321,13 +332,13 @@ footer {
 /* ================= GALLERY ================= */
 
 .gallery-card {
-    width: 850px;
+    width: 1000px;
     max-width: 95vw;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.2rem;
     margin-top: 1.5rem;
 }
@@ -351,14 +362,29 @@ footer {
     border-radius: 18px;
     border: 2px solid #99bbff;
     margin: 0;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-/* ================= GALLERY RESPONSIVE ================= */
+.gallery-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+}
+
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 700px) {
-    .gallery-card {
+
+    .card {
         width: 400px;
         max-width: 95vw;
+    }
+
+    .gallery-card {
+        width: 95vw;
     }
 
     .gallery {
