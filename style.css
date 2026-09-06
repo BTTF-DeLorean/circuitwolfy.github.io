@@ -485,6 +485,13 @@ footer {
 
     font-size: 2rem;
     font-weight: bold;
+    
+    /* center close button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    padding-bottom: 3px; /* Optical adjustment to center the multiply sign */
 
     cursor: pointer;
 
