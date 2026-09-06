@@ -126,14 +126,16 @@ main {
         6px 6px 20px rgba(0,0,0,0.3),
         inset -3px -3px 12px rgba(255,255,255,0.6),
         inset 2px 2px 5px rgba(0,0,0,0.1);
-    
-    /* Ensure elements inside stack cleanly */
+}
+
+/* Apply flex stacking only to regular cards, excluding the gallery */
+.card:not(.gallery-card) {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Add spacing between text blocks/projects and buttons inside cards */
+/* Add spacing between text blocks/projects and buttons inside regular cards */
 .card p {
     margin-bottom: 1.2rem;
 }
